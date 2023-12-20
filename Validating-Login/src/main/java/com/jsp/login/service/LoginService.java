@@ -10,15 +10,14 @@ import org.springframework.stereotype.Service;
 import com.jsp.login.entity.Login;
 import com.jsp.login.exception.InvalidPasswordException;
 import com.jsp.login.exception.UnmatchedPasswordException;
-import com.jsp.login.repository.LoginRepo;
-
+import com.jsp.login.repository.LoginRepository;
 import com.jsp.login.util.ResponseStructure;
 
 @Service
 public class LoginService {
 
 	@Autowired
-	private LoginRepo repo;
+	private LoginRepository repo;
 
 	@Autowired
 	private Login login;
