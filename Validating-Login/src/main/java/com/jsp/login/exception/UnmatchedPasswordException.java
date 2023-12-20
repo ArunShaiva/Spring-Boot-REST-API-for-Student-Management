@@ -12,5 +12,4 @@ public class UnmatchedPasswordException extends RuntimeException {
 		return msg;
 	}
 
-	
 }

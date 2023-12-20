@@ -1,6 +1,6 @@
 package com.jsp.login.exception;
 
-public class InvalidPasswordException extends RuntimeException{
+public class InvalidPasswordException extends RuntimeException {
 
 	private String msg;
 

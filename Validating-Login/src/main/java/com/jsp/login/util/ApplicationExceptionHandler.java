@@ -12,23 +12,23 @@ import com.jsp.login.exception.UnmatchedPasswordException;
 @RestControllerAdvice
 public class ApplicationExceptionHandler {
 
-	@Autowired 
+	@Autowired
 	private ErrorStructure<String> error;
-	
+
 	@ExceptionHandler(InvalidPasswordException.class)
-	public ResponseEntity<ErrorStructure<String>>handleInvalidPassword(InvalidPasswordException exception){
+	public ResponseEntity<ErrorStructure<String>> handleInvalidPassword(InvalidPasswordException exception) {
 		error.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
 		error.setMsg(exception.getMsg());
 		error.setRootCause("Password Not Matching with the Eligibilty criteria");
-	return new ResponseEntity<ErrorStructure<String>>(error,HttpStatus.NOT_ACCEPTABLE);
+		return new ResponseEntity<ErrorStructure<String>>(error, HttpStatus.NOT_ACCEPTABLE);
 	}
-	
+
 	@ExceptionHandler(UnmatchedPasswordException.class)
-	public ResponseEntity<ErrorStructure<String>>handleUnmatchedPassword(UnmatchedPasswordException exception){
+	public ResponseEntity<ErrorStructure<String>> handleUnmatchedPassword(UnmatchedPasswordException exception) {
 		error.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
 		error.setMsg(exception.getMsg());
 		error.setRootCause("Confirm password not matching with the Entered Password");
-	return new ResponseEntity<ErrorStructure<String>>(error,HttpStatus.NOT_ACCEPTABLE);
+		return new ResponseEntity<ErrorStructure<String>>(error, HttpStatus.NOT_ACCEPTABLE);
 	}
-    
+
 }

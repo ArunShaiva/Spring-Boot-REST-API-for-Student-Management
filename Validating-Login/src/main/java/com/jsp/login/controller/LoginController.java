@@ -15,9 +15,10 @@ public class LoginController {
 
 	@Autowired
 	private LoginService service;
-	
+
 	@PostMapping("/login")
-	public ResponseEntity<ResponseStructure<Login>> singIn(@RequestParam String userName,String password,String confirmPassword){
-		return service.singIn(userName,password,confirmPassword);
+	public ResponseEntity<ResponseStructure<Login>> singIn(@RequestParam String userName, String password,
+			String confirmPassword) {
+		return service.singIn(userName, password, confirmPassword);
 	}
 }
