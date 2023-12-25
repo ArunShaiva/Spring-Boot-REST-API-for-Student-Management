@@ -8,8 +8,8 @@ public class SpringBoot2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBoot2Application.class, args);
-		System.out.println("Ran succesfully");
-
+		System.out.println("Ran succesfully");    
+		
 	}
 
 }
